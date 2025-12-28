@@ -3,114 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Custom Image Enhancer</title>
+    <title>Night Vision Enhancer</title>
     <style>
-        body { font-family: sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; background: #f0f2f5; }
-        .container { background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
-        .controls { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 20px 0; }
-        button { background: #007bff; color: white; border: none; padding: 12px 24px; border-radius: 6px; cursor: pointer; font-size: 16px; }
-        button:disabled { background: #ccc; }
-        button:hover:not(:disabled) { background: #0056b3; }
-        #status { margin-top: 10px; color: #666; font-style: italic; }
-        img { max-width: 100%; border-radius: 8px; margin-top: 20px; display: none; }
-        .slider-group { margin-bottom: 10px; }
-        label { display: block; margin-bottom: 5px; font-weight: bold; }
+        body, html { margin: 0; padding: 0; height: 100%; background-color: #0b0f19; }
+        gradio-app { width: 100%; height: 100%; border: none; }
     </style>
+    <!-- Import Gradio Web Component -->
+    <script type="module" src="https://gradio.s3-us-west-2.amazonaws.com/4.16.0/gradio.js"></script>
 </head>
 <body>
 
-<div class="container">
-    <h1>Night-Vision Enhancer</h1>
-    
-    <div class="input-section">
-        <label>1. Upload Image</label>
-        <input type="file" id="fileInput" accept="image/*">
-    </div>
-
-    <div class="controls">
-        <div class="slider-group">
-            <label>Brightness Target (100-200)</label>
-            <input type="range" id="brightness" min="100" max="200" value="160">
-            <span id="brightVal">160</span>
-        </div>
-        <div class="slider-group">
-            <label>AI Strength (0.1 - 0.5)</label>
-            <input type="range" id="strength" min="0.1" max="0.5" step="0.05" value="0.25">
-            <span id="strVal">0.25</span>
-        </div>
-    </div>
-
-    <button id="runBtn">Enhance Image</button>
-    <p id="status">Ready...</p>
-
-    <!-- Results Area -->
-    <div id="resultArea">
-        <img id="outputImage" alt="Enhanced Result">
-        <pre id="metrics" style="background:#eee; padding:10px; border-radius:4px; display:none;"></pre>
-    </div>
-</div>
-
-<!-- Import Gradio Client -->
-<script type="module">
-    import { Client } from "https://cdn.jsdelivr.net/npm/@gradio/client/+esm";
-
-    // --- CONFIGURATION ---
-    // TODO: REPLACE THIS WITH YOUR ACTUAL SPACE ID (e.g., "john-wick/image-enhancer")
-    const SPACE_ID = "john-wick123/Low-Light-Image-Enhancement"; 
-    // ---------------------
-
-    const fileInput = document.getElementById('fileInput');
-    const runBtn = document.getElementById('runBtn');
-    const status = document.getElementById('status');
-    const outputImg = document.getElementById('outputImage');
-    const metricsTxt = document.getElementById('metrics');
-
-    // UI Sliders update text
-    document.getElementById('brightness').oninput = (e) => document.getElementById('brightVal').innerText = e.target.value;
-    document.getElementById('strength').oninput = (e) => document.getElementById('strVal').innerText = e.target.value;
-
-    runBtn.onclick = async () => {
-        if (!fileInput.files[0]) {
-            alert("Please select an image first!");
-            return;
-        }
-
-        try {
-            status.innerText = "⏳ Connecting to AI Server (this may take 10s)...";
-            runBtn.disabled = true;
-
-            // 1. Connect to your Hugging Face Space
-            const app = await Client.connect(SPACE_ID);
-
-            status.innerText = "🚀 Processing image... (Wait ~45s for CPU)";
-            
-            // 2. Send data to the API
-            // The inputs array matches your python function: [image, brightness, strength, steps]
-            const result = await app.predict("/predict", [
-                fileInput.files[0],                         // input_image
-                parseInt(document.getElementById('brightness').value), // brightness
-                parseFloat(document.getElementById('strength').value), // strength
-                2                                           // steps (hardcoded to 2 for speed)
-            ]);
-
-            // 3. Display Results
-            // Result.data is an array: [ImageURL, TextString]
-            outputImg.src = result.data[0].url;
-            outputImg.style.display = "block";
-            
-            metricsTxt.innerText = result.data[1];
-            metricsTxt.style.display = "block";
-            
-            status.innerText = "✅ Done!";
-
-        } catch (error) {
-            console.error(error);
-            status.innerText = "❌ Error: " + error.message;
-        } final {
-            runBtn.disabled = false;
-        }
-    };
-</script>
+    <!-- REPLACE 'john-wick123/Low-Light-Image-Enhancement' WITH YOUR ACTUAL SPACE ID -->
+    <gradio-app src="https://john-wick123-low-light-image-enhancement.hf.space"></gradio-app>
 
 </body>
 </html>
