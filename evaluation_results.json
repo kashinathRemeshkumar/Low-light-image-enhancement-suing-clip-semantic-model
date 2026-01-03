@@ -1,0 +1,215 @@
+{
+  "timestamp": "2025-12-29T16:13:24.814346",
+  "dataset": "LOL",
+  "enhanced_dir": "/content/drive/MyDrive/Colab Notebooks/test_data/enhanced",
+  "low_dir": "/content/drive/MyDrive/Colab Notebooks/test_data/lol_dataset/eval15/low",
+  "high_dir": "/content/drive/MyDrive/Colab Notebooks/test_data/lol_dataset/eval15/high",
+  "num_images": 15,
+  "aggregated_stats": {
+    "PSNR": {
+      "average": 15.5568,
+      "std": 4.3947,
+      "min": 7.2487,
+      "max": 24.3161,
+      "count": 15
+    },
+    "SSIM": {
+      "average": 0.7292,
+      "std": 0.1298,
+      "min": 0.3667,
+      "max": 0.8584,
+      "count": 15
+    },
+    "LPIPS": {
+      "average": 0.3226,
+      "std": 0.1373,
+      "min": 0.1431,
+      "max": 0.6537,
+      "count": 15
+    },
+    "MUSIQ": {
+      "average": 55.118,
+      "std": 6.1056,
+      "min": 43.7049,
+      "max": 65.1339,
+      "count": 15
+    },
+    "LOE": {
+      "average": 159.6515,
+      "std": 94.8829,
+      "min": 51.8684,
+      "max": 426.6464,
+      "count": 15
+    },
+    "FID": {
+      "score": 133.2763
+    }
+  },
+  "individual_results": [
+    {
+      "filename": "1.png",
+      "enhanced_path": "/content/drive/MyDrive/Colab Notebooks/test_data/enhanced/1.png",
+      "metrics": {
+        "MUSIQ": 54.5905,
+        "PSNR": 16.7014,
+        "SSIM": 0.8584,
+        "LPIPS": 0.1821,
+        "LOE": 106.4236
+      }
+    },
+    {
+      "filename": "111.png",
+      "enhanced_path": "/content/drive/MyDrive/Colab Notebooks/test_data/enhanced/111.png",
+      "metrics": {
+        "MUSIQ": 64.5711,
+        "PSNR": 13.3267,
+        "SSIM": 0.799,
+        "LPIPS": 0.305,
+        "LOE": 138.3244
+      }
+    },
+    {
+      "filename": "146.png",
+      "enhanced_path": "/content/drive/MyDrive/Colab Notebooks/test_data/enhanced/146.png",
+      "metrics": {
+        "MUSIQ": 56.706,
+        "PSNR": 16.0611,
+        "SSIM": 0.8499,
+        "LPIPS": 0.1978,
+        "LOE": 258.568
+      }
+    },
+    {
+      "filename": "179.png",
+      "enhanced_path": "/content/drive/MyDrive/Colab Notebooks/test_data/enhanced/179.png",
+      "metrics": {
+        "MUSIQ": 65.1339,
+        "PSNR": 18.5601,
+        "SSIM": 0.8456,
+        "LPIPS": 0.1431,
+        "LOE": 289.2236
+      }
+    },
+    {
+      "filename": "22.png",
+      "enhanced_path": "/content/drive/MyDrive/Colab Notebooks/test_data/enhanced/22.png",
+      "metrics": {
+        "MUSIQ": 53.0962,
+        "PSNR": 10.6291,
+        "SSIM": 0.5913,
+        "LPIPS": 0.3708,
+        "LOE": 51.8684
+      }
+    },
+    {
+      "filename": "23.png",
+      "enhanced_path": "/content/drive/MyDrive/Colab Notebooks/test_data/enhanced/23.png",
+      "metrics": {
+        "MUSIQ": 43.7049,
+        "PSNR": 7.2487,
+        "SSIM": 0.3667,
+        "LPIPS": 0.6537,
+        "LOE": 73.8488
+      }
+    },
+    {
+      "filename": "493.png",
+      "enhanced_path": "/content/drive/MyDrive/Colab Notebooks/test_data/enhanced/493.png",
+      "metrics": {
+        "MUSIQ": 62.9963,
+        "PSNR": 16.8797,
+        "SSIM": 0.6093,
+        "LPIPS": 0.2137,
+        "LOE": 121.9356
+      }
+    },
+    {
+      "filename": "547.png",
+      "enhanced_path": "/content/drive/MyDrive/Colab Notebooks/test_data/enhanced/547.png",
+      "metrics": {
+        "MUSIQ": 54.5348,
+        "PSNR": 20.6986,
+        "SSIM": 0.7776,
+        "LPIPS": 0.3595,
+        "LOE": 145.2756
+      }
+    },
+    {
+      "filename": "55.png",
+      "enhanced_path": "/content/drive/MyDrive/Colab Notebooks/test_data/enhanced/55.png",
+      "metrics": {
+        "MUSIQ": 46.3127,
+        "PSNR": 9.6394,
+        "SSIM": 0.6355,
+        "LPIPS": 0.5366,
+        "LOE": 102.7852
+      }
+    },
+    {
+      "filename": "665.png",
+      "enhanced_path": "/content/drive/MyDrive/Colab Notebooks/test_data/enhanced/665.png",
+      "metrics": {
+        "MUSIQ": 49.5815,
+        "PSNR": 13.3969,
+        "SSIM": 0.7001,
+        "LPIPS": 0.4852,
+        "LOE": 138.948
+      }
+    },
+    {
+      "filename": "669.png",
+      "enhanced_path": "/content/drive/MyDrive/Colab Notebooks/test_data/enhanced/669.png",
+      "metrics": {
+        "MUSIQ": 54.5715,
+        "PSNR": 15.8917,
+        "SSIM": 0.7833,
+        "LPIPS": 0.3172,
+        "LOE": 138.162
+      }
+    },
+    {
+      "filename": "748.png",
+      "enhanced_path": "/content/drive/MyDrive/Colab Notebooks/test_data/enhanced/748.png",
+      "metrics": {
+        "MUSIQ": 51.2548,
+        "PSNR": 24.3161,
+        "SSIM": 0.8515,
+        "LPIPS": 0.2051,
+        "LOE": 197.2428
+      }
+    },
+    {
+      "filename": "778.png",
+      "enhanced_path": "/content/drive/MyDrive/Colab Notebooks/test_data/enhanced/778.png",
+      "metrics": {
+        "MUSIQ": 57.2869,
+        "PSNR": 17.9201,
+        "SSIM": 0.693,
+        "LPIPS": 0.3067,
+        "LOE": 128.008
+      }
+    },
+    {
+      "filename": "780.png",
+      "enhanced_path": "/content/drive/MyDrive/Colab Notebooks/test_data/enhanced/780.png",
+      "metrics": {
+        "MUSIQ": 51.7752,
+        "PSNR": 19.9192,
+        "SSIM": 0.7982,
+        "LPIPS": 0.2808,
+        "LOE": 426.6464
+      }
+    },
+    {
+      "filename": "79.png",
+      "enhanced_path": "/content/drive/MyDrive/Colab Notebooks/test_data/enhanced/79.png",
+      "metrics": {
+        "MUSIQ": 60.6544,
+        "PSNR": 12.1628,
+        "SSIM": 0.7791,
+        "LPIPS": 0.2824,
+        "LOE": 77.5128
+      }
+    }
+  ]
+}
