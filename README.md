@@ -9,7 +9,7 @@ This project leverages the semantic understanding capabilities of OpenAI's CLIP 
 ## Sample Output
 
 <p align="center">
-  <img src="output.png" alt="Low-light Input vs Enhanced Output" width="90%"/>
+  <img src="image.png" alt="Low-light Input vs Enhanced Output" width="100%"/>
   <br/>
   <em>Left: Low-light input &nbsp;|&nbsp; Right: Enhanced output</em>
 </p>
