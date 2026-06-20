@@ -86,7 +86,7 @@ Evaluation only — no training is performed.
 
 ## Citation
 
-If you reference this work, please cite the accompanying paper: *Zero Shot Low Light Image Enhancement using Vision Language Models and Semantic Diffusion* (Remeshkumar, K., Abhijith, R., Theveril, K. V., Hema, H., Bobby, D. P.).
+If you reference this work, please cite the accompanying paper: *Zero Shot Low Light Image Enhancement using Vision Language Models and Semantic Diffusion* (Kashinath R, Abhijith R.,Kevin V.T, Dan Bobby P ,Hema H.).
 
 ## License
 
